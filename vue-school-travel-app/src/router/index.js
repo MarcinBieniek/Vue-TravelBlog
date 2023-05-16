@@ -7,11 +7,12 @@ const routes = [
   { path: "/hawaii", name: "hawaii", component: () => import(/* webpackChunkName: "hawaii" */ "../views/HawaiiView.vue")},
   { path: "/jamaica", name: "jamaica", component: () => import(/* webpackChunkName: "jamaica" */ "../views/JamaicaView.vue") },
   { path: "/panama", name: "panama", component: () => import(/* webpackChunkName: "panama" */ "../views/PanamaView.vue") },
+  { path: "/destination/:id", component: () => import(/* webpackChunkName: "panama" */  "../views/DestinationShow.vue") },
 ];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes,
+  routes
 });
 
 export default router;
